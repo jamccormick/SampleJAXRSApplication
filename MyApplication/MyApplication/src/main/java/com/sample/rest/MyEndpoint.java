@@ -29,8 +29,8 @@ public class MyEndpoint {
 		return Response.ok(greeting).build();
 	}
 
-	@Path("/putHello")
-	@GET
+	@Path("/postHello")
+	@POST
 	public Response putHello(@QueryParam("message") String message) {
 		return Response.ok(dao.postGreeting(message)).build();
 	}
