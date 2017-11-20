@@ -31,7 +31,7 @@ public class MyEndpoint {
 
 	@Path("/postHello")
 	@POST
-	public Response putHello(@QueryParam("message") String message) {
+	public Response postHello(@QueryParam("message") String message) {
 		return Response.ok(dao.postGreeting(message)).build();
 	}
 	
