@@ -3,7 +3,7 @@ A sample JAX-RS project
 
 # Details
 
-I created this application to have a simple walk-through of the more common elements of the JavaEE spec.  It's primarily written against Wildfly, but it should work against any modern JavaEE application server.
+I created this application to have a simple walk-through of some of the more common elements of the JavaEE spec, in particular JAX-RS, CDI, and JPA.  It's primarily written against Wildfly, but it should work against any modern JavaEE application server.
 
 Additionally, the whole thing builds fine with Gradle.  Seriously, try it out.
 
