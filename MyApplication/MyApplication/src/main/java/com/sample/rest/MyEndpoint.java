@@ -9,6 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 
 import com.sample.dao.HelloDAO;
 
@@ -25,8 +26,12 @@ public class MyEndpoint {
 	@GET
 	public Response sayHello()
 	{
-		String greeting = dao.getGreeting();
-		return Response.ok(greeting).build();
+		try {
+			String greeting = dao.getGreeting();
+			return Response.ok(greeting).build();
+		} catch (NullPointerException npe) {
+			return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+		}
 	}
 
 	@Path("/postHello")
